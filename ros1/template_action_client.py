@@ -10,6 +10,7 @@ import actionlib
 ## msgs
 from template_actions.msg import templateGoal, templateFeedback, templateResult, templateAction
 
+
 ### local dependenies
 
 ### main class

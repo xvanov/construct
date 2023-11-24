@@ -1,0 +1,75 @@
+[0.000000] (-) TimerEvent: {}
+[0.001417] (publisher_pkg) JobQueued: {'identifier': 'publisher_pkg', 'dependencies': OrderedDict()}
+[0.001487] (publisher_pkg) JobStarted: {'identifier': 'publisher_pkg'}
+[0.099373] (-) TimerEvent: {}
+[0.199739] (-) TimerEvent: {}
+[0.300124] (-) TimerEvent: {}
+[0.400776] (-) TimerEvent: {}
+[0.501168] (-) TimerEvent: {}
+[0.601589] (-) TimerEvent: {}
+[0.702036] (-) TimerEvent: {}
+[0.802390] (-) TimerEvent: {}
+[0.902856] (-) TimerEvent: {}
+[1.003221] (-) TimerEvent: {}
+[1.103650] (-) TimerEvent: {}
+[1.205098] (-) TimerEvent: {}
+[1.305451] (-) TimerEvent: {}
+[1.405858] (-) TimerEvent: {}
+[1.506685] (-) TimerEvent: {}
+[1.607152] (-) TimerEvent: {}
+[1.707628] (-) TimerEvent: {}
+[1.808041] (-) TimerEvent: {}
+[1.908477] (-) TimerEvent: {}
+[2.008915] (-) TimerEvent: {}
+[2.109366] (-) TimerEvent: {}
+[2.209837] (-) TimerEvent: {}
+[2.310314] (-) TimerEvent: {}
+[2.410897] (-) TimerEvent: {}
+[2.511350] (-) TimerEvent: {}
+[2.589944] (publisher_pkg) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../build/publisher_pkg', 'build', '--build-base', '/home/user/ros2_ws/build/publisher_pkg/build', 'install', '--record', '/home/user/ros2_ws/build/publisher_pkg/install.log', '--single-version-externally-managed'], 'cwd': '/home/user/ros2_ws/publisher_pkg', 'env': {'ROS_VERSION': '2', 'GAZEBO_MASTER_URI': 'http://1_simulation:11345', 'ROS_PYTHON_VERSION': '3', 'HOSTNAME': '1_xterm', 'PWD': '/home/user/ros2_ws/build/publisher_pkg', 'PORT': '4000', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'ROS_IP': '', 'HOME': '/home/user', 'GAZEBO_PLUGIN_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:', 'LANG': 'en_US.UTF-8', 'GAZEBO_MODEL_DATABASE_URI': 'http://models.gazebosim.org', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/home/simulations/ros2_sims_ws/install/turtlebot3:/home/simulations/ros2_sims_ws/install/turtlebot3_teleop:/home/simulations/ros2_sims_ws/install/turtlebot3_simulations:/home/simulations/ros2_sims_ws/install/turtlebot3_navigation2:/home/simulations/ros2_sims_ws/install/turtlebot3_example:/home/simulations/ros2_sims_ws/install/turtlebot3_msgs:/home/simulations/ros2_sims_ws/install/turtlebot3_gazebo:/home/simulations/ros2_sims_ws/install/turtlebot3_bringup:/home/simulations/ros2_sims_ws/install/turtlebot3_description:/home/simulations/ros2_sims_ws/install/turtlebot3_cartographer:/home/simulations/ros2_sims_ws/install/turtlebot3_as:/home/simulations/ros2_sims_ws/install/t3_action_msg:/home/simulations/ros2_sims_ws/install/services_pkg:/home/simulations/ros2_sims_ws/install/dynamixel_sdk:/opt/ros/humble', 'CMAKE_PREFIX_PATH': '/home/simulations/ros2_sims_ws/install/turtlebot3:/home/simulations/ros2_sims_ws/install/turtlebot3_simulations:/home/simulations/ros2_sims_ws/install/turtlebot3_navigation2:/home/simulations/ros2_sims_ws/install/turtlebot3_msgs:/home/simulations/ros2_sims_ws/install/turtlebot3_gazebo:/home/simulations/ros2_sims_ws/install/turtlebot3_bringup:/home/simulations/ros2_sims_ws/install/turtlebot3_description:/home/simulations/ros2_sims_ws/install/turtlebot3_cartographer:/home/simulations/ros2_sims_ws/install/turtlebot3_as:/home/simulations/ros2_sims_ws/install/t3_action_msg:/home/simulations/ros2_sims_ws/install/dynamixel_sdk', 'GAZEBO_RESOURCE_PATH': '/usr/share/gazebo-11:/usr/share/gazebo-11:/usr/share/gazebo', 'COLCON_PREFIX_PATH': '/home/simulations/ros2_sims_ws/install:/home/user/ros2_ws/install', 'GAZEBO_MASTER_PORT': '11345', 'NVM_DIR': '/usr/local/share/shell/.nvm', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PYTHONPATH': '/home/user/ros2_ws/build/publisher_pkg/prefix_override:/home/user/ros2_ws/install/publisher_pkg/lib/python3.10/site-packages:/home/simulations/ros2_sims_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/simulations/ros2_sims_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/simulations/ros2_sims_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/home/simulations/ros2_sims_ws/install/t3_action_msg/local/lib/python3.10/dist-packages:/home/simulations/ros2_sims_ws/install/services_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'TERM': 'xterm-color', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'SNAPCRAFT_BUILD_ENVIRONMENT': 'host', 'GAZEBO_MASTER_HOSTNAME': '1_simulation', 'DISPLAY': ':1', 'SHLVL': '2', 'NVM_CD_FLAGS': '', 'ROS_MASTER_URI': 'http://1_simulation:11311', 'ROS_HOSTNAME': '1_xterm', 'LD_LIBRARY_PATH': '/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib:/home/simulations/ros2_sims_ws/install/turtlebot3_msgs/lib:/home/simulations/ros2_sims_ws/install/t3_action_msg/lib:/home/simulations/ros2_sims_ws/install/dynamixel_sdk/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib::/usr/lib/x86_64-linux-gnu/gazebo-11/plugins::/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:', 'ROS_LOCALHOST_ONLY': '0', 'SLOT_SHELL_START_ID': '0', 'SLOT_PREFIX': '12905ba2-d1d2-43f6-924b-183a08c798e3', 'LC_ALL': 'C', 'SOURCE_ROS1_WS': '', 'GAZEBO_MODEL_PATH': '/usr/share/gazebo-11/models:/usr/share/gazebo-11/models:/usr/share/gazebo-9/models:/usr/share/gazebo/models_robox', 'SLOT_JENKINS_PORT': '25175', 'SLOT_SYSTEMD': 'False', 'PATH': '/opt/ros/humble/bin:/usr/local/share/shell/.nvm/versions/node/v6.11.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/user/.cargo/bin:/home/user/.cargo/bin', 'SELECTED_ROS_DISTRO': 'humble', 'NVM_BIN': '/usr/local/share/shell/.nvm/versions/node/v6.11.2/bin', 'NODE_VERSION': 'v6.11.2', 'DEBIAN_FRONTEND': 'noninteractive', 'ROS_DISTRO': 'humble', 'GAZEBO_VERBOSE': '0', 'OGRE_RESOURCE_PATH': '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0', 'OLDPWD': '/home/user/ros2_ws/publisher_pkg', 'SOURCE_ROS2_WS': 'True', 'SLOT_ROSBRIDGE_PORT': '20001', '_': '/usr/bin/env'}, 'shell': False}
+[2.611532] (-) TimerEvent: {}
+[2.711974] (-) TimerEvent: {}
+[2.812553] (-) TimerEvent: {}
+[2.912984] (-) TimerEvent: {}
+[3.013409] (-) TimerEvent: {}
+[3.113839] (-) TimerEvent: {}
+[3.153174] (publisher_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[3.154081] (publisher_pkg) StdoutLine: {'line': b'creating ../build/publisher_pkg/publisher_pkg.egg-info\n'}
+[3.154470] (publisher_pkg) StdoutLine: {'line': b'writing ../build/publisher_pkg/publisher_pkg.egg-info/PKG-INFO\n'}
+[3.154842] (publisher_pkg) StdoutLine: {'line': b'writing dependency_links to ../build/publisher_pkg/publisher_pkg.egg-info/dependency_links.txt\n'}
+[3.155101] (publisher_pkg) StdoutLine: {'line': b'writing entry points to ../build/publisher_pkg/publisher_pkg.egg-info/entry_points.txt\n'}
+[3.155349] (publisher_pkg) StdoutLine: {'line': b'writing requirements to ../build/publisher_pkg/publisher_pkg.egg-info/requires.txt\n'}
+[3.155542] (publisher_pkg) StdoutLine: {'line': b'writing top-level names to ../build/publisher_pkg/publisher_pkg.egg-info/top_level.txt\n'}
+[3.155766] (publisher_pkg) StdoutLine: {'line': b"writing manifest file '../build/publisher_pkg/publisher_pkg.egg-info/SOURCES.txt'\n"}
+[3.158375] (publisher_pkg) StdoutLine: {'line': b"reading manifest file '../build/publisher_pkg/publisher_pkg.egg-info/SOURCES.txt'\n"}
+[3.159622] (publisher_pkg) StdoutLine: {'line': b"writing manifest file '../build/publisher_pkg/publisher_pkg.egg-info/SOURCES.txt'\n"}
+[3.159933] (publisher_pkg) StdoutLine: {'line': b'running build\n'}
+[3.160089] (publisher_pkg) StdoutLine: {'line': b'running build_py\n'}
+[3.160386] (publisher_pkg) StdoutLine: {'line': b'creating /home/user/ros2_ws/build/publisher_pkg/build\n'}
+[3.160561] (publisher_pkg) StdoutLine: {'line': b'creating /home/user/ros2_ws/build/publisher_pkg/build/lib\n'}
+[3.160732] (publisher_pkg) StdoutLine: {'line': b'creating /home/user/ros2_ws/build/publisher_pkg/build/lib/publisher_pkg\n'}
+[3.160975] (publisher_pkg) StdoutLine: {'line': b'copying publisher_pkg/__init__.py -> /home/user/ros2_ws/build/publisher_pkg/build/lib/publisher_pkg\n'}
+[3.161127] (publisher_pkg) StdoutLine: {'line': b'copying publisher_pkg/simple_publisher.py -> /home/user/ros2_ws/build/publisher_pkg/build/lib/publisher_pkg\n'}
+[3.161317] (publisher_pkg) StdoutLine: {'line': b'running install\n'}
+[3.161587] (publisher_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[3.162909] (publisher_pkg) StdoutLine: {'line': b'creating /home/user/ros2_ws/install/publisher_pkg/lib/python3.10/site-packages/publisher_pkg\n'}
+[3.163168] (publisher_pkg) StdoutLine: {'line': b'copying /home/user/ros2_ws/build/publisher_pkg/build/lib/publisher_pkg/__init__.py -> /home/user/ros2_ws/install/publisher_pkg/lib/python3.10/site-packages/publisher_pkg\n'}
+[3.163418] (publisher_pkg) StdoutLine: {'line': b'copying /home/user/ros2_ws/build/publisher_pkg/build/lib/publisher_pkg/simple_publisher.py -> /home/user/ros2_ws/install/publisher_pkg/lib/python3.10/site-packages/publisher_pkg\n'}
+[3.164431] (publisher_pkg) StdoutLine: {'line': b'byte-compiling /home/user/ros2_ws/install/publisher_pkg/lib/python3.10/site-packages/publisher_pkg/__init__.py to __init__.cpython-310.pyc\n'}
+[3.165146] (publisher_pkg) StdoutLine: {'line': b'byte-compiling /home/user/ros2_ws/install/publisher_pkg/lib/python3.10/site-packages/publisher_pkg/simple_publisher.py to simple_publisher.cpython-310.pyc\n'}
+[3.166112] (publisher_pkg) StdoutLine: {'line': b'running install_data\n'}
+[3.167235] (publisher_pkg) StdoutLine: {'line': b'creating /home/user/ros2_ws/install/publisher_pkg/share/ament_index\n'}
+[3.167628] (publisher_pkg) StdoutLine: {'line': b'creating /home/user/ros2_ws/install/publisher_pkg/share/ament_index/resource_index\n'}
+[3.168014] (publisher_pkg) StdoutLine: {'line': b'creating /home/user/ros2_ws/install/publisher_pkg/share/ament_index/resource_index/packages\n'}
+[3.168495] (publisher_pkg) StdoutLine: {'line': b'copying resource/publisher_pkg -> /home/user/ros2_ws/install/publisher_pkg/share/ament_index/resource_index/packages\n'}
+[3.168981] (publisher_pkg) StdoutLine: {'line': b'copying package.xml -> /home/user/ros2_ws/install/publisher_pkg/share/publisher_pkg\n'}
+[3.169489] (publisher_pkg) StdoutLine: {'line': b'copying launch/publisher_pkg_launch_file.launch.py -> /home/user/ros2_ws/install/publisher_pkg/share/publisher_pkg\n'}
+[3.169896] (publisher_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.173588] (publisher_pkg) StdoutLine: {'line': b'Copying ../build/publisher_pkg/publisher_pkg.egg-info to /home/user/ros2_ws/install/publisher_pkg/lib/python3.10/site-packages/publisher_pkg-0.0.0-py3.10.egg-info\n'}
+[3.175463] (publisher_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[3.213958] (-) TimerEvent: {}
+[3.220174] (publisher_pkg) StdoutLine: {'line': b'Installing simple_publisher script to /home/user/ros2_ws/install/publisher_pkg/lib/publisher_pkg\n'}
+[3.221015] (publisher_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/user/ros2_ws/build/publisher_pkg/install.log'\n"}
+[3.263476] (publisher_pkg) CommandEnded: {'returncode': 0}
+[3.311912] (publisher_pkg) JobEnded: {'identifier': 'publisher_pkg', 'rc': 0}
+[3.313183] (-) EventReactorShutdown: {}
