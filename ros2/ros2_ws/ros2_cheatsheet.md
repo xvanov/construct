@@ -1,9 +1,21 @@
 
-Packaging
+# Packaging Guide ROS2
 
 1. create a package
+This guide outlines the steps for packaging `example36_pkg` in ROS2.
+
+## Steps for Packaging
+
+### 1. Create a Package
+
+To create a new package, use the following command:
+
+```bash
 ros2 pkg create --build-type ament_python example36_pkg --dependencies rclpy std_msgs geometry_msgs custom_interfaces
+```
+
 2. create a launch file
+```python
 from launch import LaunchDescription
 from launch_ros.actions import Node
 
@@ -14,7 +26,10 @@ def generate_launch_description():
             executable='example36',
             output='screen'),
     ])
+```
+
 3. modify setup.py 
+```python
 from setuptools import setup
 import os
 from glob import glob
@@ -44,11 +59,12 @@ setup(
         ],
     },
 )
+```
 4. compile package
+```bash
 colcon build --packages-select example36_pkg
 source ~/ros2_ws/install/setup.bash
-
-
+```
 
 
 
