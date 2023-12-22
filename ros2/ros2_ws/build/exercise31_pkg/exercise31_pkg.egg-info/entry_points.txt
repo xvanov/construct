@@ -1,3 +1,0 @@
-[console_scripts]
-exercise31 = exercise31_pkg.exercise31:main
-

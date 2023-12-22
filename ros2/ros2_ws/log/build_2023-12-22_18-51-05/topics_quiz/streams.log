@@ -1,0 +1,41 @@
+[1.294s] Invoking command in '/home/user/ros2_ws/topics_quiz': PYTHONPATH=/home/user/ros2_ws/build/topics_quiz/prefix_override:/home/user/ros2_ws/install/topics_quiz/lib/python3.10/site-packages:${PYTHONPATH} _=/usr/bin/env /usr/bin/python3 setup.py egg_info --egg-base ../build/topics_quiz build --build-base /home/user/ros2_ws/build/topics_quiz/build install --record /home/user/ros2_ws/build/topics_quiz/install.log --single-version-externally-managed
+[1.807s] running egg_info
+[1.808s] creating ../build/topics_quiz/topics_quiz.egg-info
+[1.808s] writing ../build/topics_quiz/topics_quiz.egg-info/PKG-INFO
+[1.808s] writing dependency_links to ../build/topics_quiz/topics_quiz.egg-info/dependency_links.txt
+[1.809s] writing entry points to ../build/topics_quiz/topics_quiz.egg-info/entry_points.txt
+[1.809s] writing requirements to ../build/topics_quiz/topics_quiz.egg-info/requires.txt
+[1.809s] writing top-level names to ../build/topics_quiz/topics_quiz.egg-info/top_level.txt
+[1.809s] writing manifest file '../build/topics_quiz/topics_quiz.egg-info/SOURCES.txt'
+[1.812s] reading manifest file '../build/topics_quiz/topics_quiz.egg-info/SOURCES.txt'
+[1.813s] writing manifest file '../build/topics_quiz/topics_quiz.egg-info/SOURCES.txt'
+[1.813s] running build
+[1.813s] running build_py
+[1.814s] creating /home/user/ros2_ws/build/topics_quiz/build
+[1.814s] creating /home/user/ros2_ws/build/topics_quiz/build/lib
+[1.814s] creating /home/user/ros2_ws/build/topics_quiz/build/lib/topics_quiz
+[1.814s] copying topics_quiz/__init__.py -> /home/user/ros2_ws/build/topics_quiz/build/lib/topics_quiz
+[1.814s] copying topics_quiz/topics_quiz copy.py -> /home/user/ros2_ws/build/topics_quiz/build/lib/topics_quiz
+[1.814s] copying topics_quiz/topics_quiz.py -> /home/user/ros2_ws/build/topics_quiz/build/lib/topics_quiz
+[1.814s] running install
+[1.815s] running install_lib
+[1.816s] creating /home/user/ros2_ws/install/topics_quiz/lib/python3.10/site-packages/topics_quiz
+[1.816s] copying /home/user/ros2_ws/build/topics_quiz/build/lib/topics_quiz/__init__.py -> /home/user/ros2_ws/install/topics_quiz/lib/python3.10/site-packages/topics_quiz
+[1.816s] copying /home/user/ros2_ws/build/topics_quiz/build/lib/topics_quiz/topics_quiz copy.py -> /home/user/ros2_ws/install/topics_quiz/lib/python3.10/site-packages/topics_quiz
+[1.817s] copying /home/user/ros2_ws/build/topics_quiz/build/lib/topics_quiz/topics_quiz.py -> /home/user/ros2_ws/install/topics_quiz/lib/python3.10/site-packages/topics_quiz
+[1.817s] byte-compiling /home/user/ros2_ws/install/topics_quiz/lib/python3.10/site-packages/topics_quiz/__init__.py to __init__.cpython-310.pyc
+[1.818s] byte-compiling /home/user/ros2_ws/install/topics_quiz/lib/python3.10/site-packages/topics_quiz/topics_quiz copy.py to topics_quiz copy.cpython-310.pyc
+[1.819s] byte-compiling /home/user/ros2_ws/install/topics_quiz/lib/python3.10/site-packages/topics_quiz/topics_quiz.py to topics_quiz.cpython-310.pyc
+[1.820s] running install_data
+[1.821s] creating /home/user/ros2_ws/install/topics_quiz/share/ament_index
+[1.821s] creating /home/user/ros2_ws/install/topics_quiz/share/ament_index/resource_index
+[1.822s] creating /home/user/ros2_ws/install/topics_quiz/share/ament_index/resource_index/packages
+[1.822s] copying resource/topics_quiz -> /home/user/ros2_ws/install/topics_quiz/share/ament_index/resource_index/packages
+[1.822s] copying package.xml -> /home/user/ros2_ws/install/topics_quiz/share/topics_quiz
+[1.822s] copying launch/topics_quiz.launch.py -> /home/user/ros2_ws/install/topics_quiz/share/topics_quiz
+[1.822s] running install_egg_info
+[1.824s] Copying ../build/topics_quiz/topics_quiz.egg-info to /home/user/ros2_ws/install/topics_quiz/lib/python3.10/site-packages/topics_quiz-0.0.0-py3.10.egg-info
+[1.826s] running install_scripts
+[1.862s] Installing topics_quiz script to /home/user/ros2_ws/install/topics_quiz/lib/topics_quiz
+[1.862s] writing list of installed files to '/home/user/ros2_ws/build/topics_quiz/install.log'
+[1.921s] Invoked command in '/home/user/ros2_ws/topics_quiz' returned '0': PYTHONPATH=/home/user/ros2_ws/build/topics_quiz/prefix_override:/home/user/ros2_ws/install/topics_quiz/lib/python3.10/site-packages:${PYTHONPATH} _=/usr/bin/env /usr/bin/python3 setup.py egg_info --egg-base ../build/topics_quiz build --build-base /home/user/ros2_ws/build/topics_quiz/build install --record /home/user/ros2_ws/build/topics_quiz/install.log --single-version-externally-managed
