@@ -66,7 +66,9 @@ colcon build --packages-select example36_pkg
 source ~/ros2_ws/install/setup.bash
 ```
 5. run
+```bash
 ros2 launch example36_pkg example36.launch.py
+```
 
 # Create a custom interface
 
@@ -99,3 +101,16 @@ source install/setup.bash
 6. Use in your node
 ros2 interface show custom_interfaces/msg/Age
 
+# Create custom service interface
+
+1. Create a directory named `srv` inside your package
+2. Inside this directory, create a file named `Name_of_your_service_type.srv`:
+
+3. Modify CMakeLists.txt file
+rosidl_generate_interfaces(${PROJECT_NAME}
+ex. add this line:
+  "srv/MyCustomServiceMessage.srv"
+)
+4. Modify package.xml file
+5. Compile and source
+6. Use in code
