@@ -73,6 +73,9 @@ ros2 launch example36_pkg example36.launch.py
 # Create a custom interface
 
 1. Create a directory named `msg` inside your package
+```
+ros2 pkg create --build-type ament_cmake custom_interfaces --dependencies rclcpp std_msgs
+```
 2. Inside this directory, create a file named `name_of_your_message.msg`
 	ex.
 
@@ -94,9 +97,11 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 <depend>custom_interfaces</depend>
 
 5. Compile and source
+```
 cd ~/ros2_ws
 colcon build --packages-select custom_interfaces
 source install/setup.bash
+```
 
 6. Use in your node
 ros2 interface show custom_interfaces/msg/Age
@@ -104,13 +109,23 @@ ros2 interface show custom_interfaces/msg/Age
 # Create custom service interface
 
 1. Create a directory named `srv` inside your package
+
 2. Inside this directory, create a file named `Name_of_your_service_type.srv`:
 
 3. Modify CMakeLists.txt file
-rosidl_generate_interfaces(${PROJECT_NAME}
 ex. add this line:
+rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/MyCustomServiceMessage.srv"
 )
 4. Modify package.xml file
+```bash
+<build_depend>rosidl_default_generators</build_depend>
+<exec_depend>rosidl_default_runtime</exec_depend>
+<member_of_group>rosidl_interface_packages</member_of_group>
+```
 5. Compile and source
+cd ~/ros2_ws
+colcon build --packages-select custom_interfaces
+source install/setup.bash
+
 6. Use in code
