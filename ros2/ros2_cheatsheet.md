@@ -11,7 +11,7 @@ This guide outlines the steps for packaging `example36_pkg` in ROS2.
 To create a new package, use the following command:
 
 ```bash
-ros2 pkg create --build-type ament_python example36_pkg --dependencies rclpy std_msgs geometry_msgs custom_interfaces
+ros2 pkg create --build-type ament_python example36_pkg --dependencies rclpy std_msgs geometry_msgs
 ```
 
 2. create a launch file (in launch directory)
@@ -90,14 +90,17 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 )
 4. Modify package.xml file
 	ex. add the following lines:
+```xml
 <build_depend>rosidl_default_generators</build_depend>
 <exec_depend>rosidl_default_runtime</exec_depend>
 <member_of_group>rosidl_interface_packages</member_of_group>
 
 <depend>custom_interfaces</depend>
+```
+
 
 5. Compile and source
-```
+```bash
 cd ~/ros2_ws
 colcon build --packages-select custom_interfaces
 source install/setup.bash
@@ -113,19 +116,23 @@ ros2 interface show custom_interfaces/msg/Age
 2. Inside this directory, create a file named `Name_of_your_service_type.srv`:
 
 3. Modify CMakeLists.txt file
-ex. add this line:
+ex. add these lines:
+find_package(rosidl_default_generators REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/MyCustomServiceMessage.srv"
 )
 4. Modify package.xml file
-```bash
+```xml
 <build_depend>rosidl_default_generators</build_depend>
 <exec_depend>rosidl_default_runtime</exec_depend>
 <member_of_group>rosidl_interface_packages</member_of_group>
 ```
+
 5. Compile and source
+```bash
 cd ~/ros2_ws
 colcon build --packages-select custom_interfaces
 source install/setup.bash
+```
 
-6. Use in code
+6. Use in codeh
