@@ -5,7 +5,7 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             package='wall_follower',
-            executable='wall_follower',
+            executable='wall_following',
             name='wall_follower',
             output='screen',
         )
