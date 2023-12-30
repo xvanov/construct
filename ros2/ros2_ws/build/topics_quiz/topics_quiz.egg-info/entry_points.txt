@@ -1,3 +1,0 @@
-[console_scripts]
-topics_quiz = topics_quiz.topics_quiz:main
-

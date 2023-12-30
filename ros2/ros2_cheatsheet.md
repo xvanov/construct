@@ -12,6 +12,7 @@ To create a new package, use the following command:
 
 ```bash
 ros2 pkg create --build-type ament_python example36_pkg --dependencies rclpy std_msgs geometry_msgs
+ros2 pkg create my_action_server --build-type ament_python --dependencies rclpy rclpy.action
 ```
 
 2. create a launch file (in launch directory)
@@ -75,6 +76,7 @@ ros2 launch example36_pkg example36.launch.py
 1. Create a directory named `msg` inside your package
 ```
 ros2 pkg create --build-type ament_cmake custom_interfaces --dependencies rclcpp std_msgs
+ros2 pkg create --build-type ament_cmake custom_interfaces --dependencies rclcpp action_msgs
 ```
 2. Inside this directory, create a file named `name_of_your_message.msg`
 	ex.
@@ -85,6 +87,8 @@ int32 day
 
 3. Modify the `CMakeLists.txt` file
 	ex. add this line:
+find_package(rosidl_default_generators REQUIRED)
+
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Age.msg"
 )
@@ -94,8 +98,13 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 <build_depend>rosidl_default_generators</build_depend>
 <exec_depend>rosidl_default_runtime</exec_depend>
 <member_of_group>rosidl_interface_packages</member_of_group>
+```
 
-<depend>custom_interfaces</depend>
+For actions:
+```xml
+<depend>rosidl_default_generators</depend>
+<exec_depend>rosidl_default_runtime</exec_depend>
+<member_of_group>rosidl_interface_packages</member_of_group>
 ```
 
 
