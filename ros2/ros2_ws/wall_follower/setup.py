@@ -25,7 +25,8 @@ setup(
     entry_points={
         'console_scripts': [
             'wall_finder = wall_follower.wall_finder:main',
-            'wall_following = wall_follower.wall_following:main'
+            'wall_following = wall_follower.wall_following:main',
+            'odom_recorder = wall_follower.odom_recorder:main'
         ],
     },
 )

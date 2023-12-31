@@ -3,20 +3,27 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     wall_follower_node = Node(
-        package='wall_follower',  # Replace with your package name
+        package='wall_follower',
         executable='wall_following',
         name='wall_follower'
     )
 
     wall_finder_node = Node(
-        package='wall_follower',  # Replace with your package name
+        package='wall_follower',
         executable='wall_finder',
         name='wall_finder'
     )
 
+    odom_recorder_node = Node(
+        package='wall_follower',
+        executable='odom_recorder',
+        name='odom_recorder'
+    )
+
+
     return LaunchDescription([
+        wall_finder_node, 
         wall_follower_node,
-        wall_finder_node
     ])
 
 if __name__ == '__main__':

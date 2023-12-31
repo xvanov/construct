@@ -34,8 +34,6 @@ class WallFollower(Node):
         
         self.get_logger().info('Wall follower node has started')
 
-
-
     def connect_to_find_wall_service(self):
         while not self.service_available:
             self.get_logger().info('Waiting for /find_wall service...')
