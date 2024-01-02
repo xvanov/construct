@@ -1,9 +1,12 @@
 import rclpy
 from rclpy.node import Node
+from rclpy.action import ActionClient
 from rclpy.callback_groups import ReentrantCallbackGroup
 from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Twist
-from wall_follower_srv.srv import FindWall
+from wall_follower_interfaces.srv import FindWall
+from actions_quiz_new.action import OdomRecord
+
 
 class WallFollower(Node):
     def __init__(self):
@@ -15,7 +18,9 @@ class WallFollower(Node):
             FindWall, 
             '/find_wall',
             callback_group=self.callback_group)
-        
+
+        self.record_odom_client = ActionClient(self, OdomRecord, 'record_odom', callback_group=self.callback_group)
+
         self.service_available = False
         self.connect_to_find_wall_service()
 
@@ -43,6 +48,35 @@ class WallFollower(Node):
 
         self.get_logger().info('Connected to /find_wall service')
         self.call_find_wall_service()
+
+        if self.wall_found:
+            self.start_odometry_recording()
+
+    def start_odometry_recording(self):
+        self.get_logger().info('Starting odometry recording...')
+        goal_msg = OdomRecord.Goal()
+        # You can set any goal parameters here if needed
+        self.record_odom_client.wait_for_server()
+        self._send_goal_future = self.record_odom_client.send_goal_async(goal_msg, feedback_callback=self.feedback_callback)
+        self._send_goal_future.add_done_callback(self.goal_response_callback)
+
+    def goal_response_callback(self, future):
+        goal_handle = future.result()
+        if not goal_handle.accepted:
+            self.get_logger().error('Odometry recording goal rejected')
+            return
+
+        self.get_logger().info('Odometry recording goal accepted')
+        self._get_result_future = goal_handle.get_result_async()
+        self._get_result_future.add_done_callback(self.get_result_callback)
+
+    def get_result_callback(self, future):
+        result = future.result().result
+        self.get_logger().info(f'Odometry recording completed: {result.total_distance} meters')
+
+    def feedback_callback(self, feedback_msg):
+        feedback = feedback_msg.feedback
+        self.get_logger().info(f'Received feedback: Distance {feedback.current_total} meters')
 
     def call_find_wall_service(self):
         request = FindWall.Request()

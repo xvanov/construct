@@ -2,7 +2,7 @@ import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Twist
-from wall_follower_srv.srv import FindWall
+from wall_follower_interfaces.srv import FindWall
 from rclpy.qos import ReliabilityPolicy, QoSProfile
 from rclpy.callback_groups import ReentrantCallbackGroup
 import threading
@@ -59,7 +59,7 @@ class WallFinder(Node):
     def rotate_to_wall(self):
         min_index = self._find_min_index()
         twist = Twist()
-        self.get_logger().info(f"Rotating towards wall")
+        #self.get_logger().info(f"Rotating towards wall")
 
         if min_index != 0:
             twist.angular.z = 0.1
@@ -69,7 +69,7 @@ class WallFinder(Node):
 
     def move_forward_until_close(self):
         twist = Twist()
-        self.get_logger().info(f"Moving towards wall")
+        #self.get_logger().info(f"Moving towards wall")
 
         if self.laser_data.ranges[0] >= 0.3:
             twist.linear.x = 0.1
@@ -84,12 +84,12 @@ class WallFinder(Node):
         if min_index != 270:
             twist.angular.z = 0.1
             self.cmd_vel_pub.publish(twist)
-            self.get_logger().info(f"Aligning with wall")
+            #self.get_logger().info(f"Aligning with wall")
         else:
             self.state = 'idle'
             twist = Twist()
             self.cmd_vel_pub.publish(twist)
-            self.get_logger().info(f"Finished")
+            self.get_logger().info(f"Aligned with wall")
 
     def _find_min_index(self):
         # Filter out invalid data and find min index

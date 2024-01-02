@@ -3,12 +3,14 @@ from rclpy.action import ActionServer
 from rclpy.node import Node
 from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.executors import MultiThreadedExecutor
-from wall_follower_srv.action import OdomRecord  # Replace with your actual action message
 from geometry_msgs.msg import Point32
 from nav_msgs.msg import Odometry
 import time
 import math
 import numpy as np
+from actions_quiz_new.action import Distance
+from actions_quiz_new.action import OdomRecord
+
 
 class OdomRecorder(Node):
 
@@ -26,6 +28,7 @@ class OdomRecorder(Node):
         self.first_odom = None
         self.odom_record = []
         self.total_distance = 0.0
+        self.current_linear_velocity = 0.0
         self.last_x, self.last_y = None, None
 
     def odom_callback(self, msg):
@@ -67,13 +70,14 @@ class OdomRecorder(Node):
             # Check if the robot has returned to the starting point
             if math.sqrt(
                 (self.last_odom.x - self.first_odom.x) ** 2 +
-                (self.last_odom.y - self.first_odom.y) ** 2) < 0.05:
+                (self.last_odom.y - self.first_odom.y) ** 2) < 0.2:
                 break
 
         # Set and return the result
         goal_handle.succeed()
         result = OdomRecord.Result()
         result.list_of_odoms = self.odom_record
+        result.total_distance = self.total_distance
         return result
 
 def euler_from_quaternion(quaternion):

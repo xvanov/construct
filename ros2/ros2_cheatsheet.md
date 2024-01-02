@@ -11,7 +11,7 @@ This guide outlines the steps for packaging `example36_pkg` in ROS2.
 To create a new package, use the following command:
 
 ```bash
-ros2 pkg create --build-type ament_python example36_pkg --dependencies rclpy std_msgs geometry_msgs
+ros2 pkg create --build-type ament_python example36_pkg --dependencies rclpy std_msgs geometry_msgs 
 ros2 pkg create my_action_server --build-type ament_python --dependencies rclpy rclpy.action
 ```
 
@@ -73,12 +73,13 @@ ros2 launch example36_pkg example36.launch.py
 
 # Create a custom interface
 
-1. Create a directory named `msg` inside your package
+1. Create a directory named `msg`/`srv`/`action` inside your package
 ```
 ros2 pkg create --build-type ament_cmake custom_interfaces --dependencies rclcpp std_msgs
 ros2 pkg create --build-type ament_cmake custom_interfaces --dependencies rclcpp action_msgs
 ```
-2. Inside this directory, create a file named `name_of_your_message.msg`
+
+2. Inside this directory, create a file named `name_of_your_message.msg`/`.srv`/`.action`
 	ex.
 
 int32 year
@@ -88,12 +89,12 @@ int32 day
 3. Modify the `CMakeLists.txt` file
 	ex. add this line:
 find_package(rosidl_default_generators REQUIRED)
-
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Age.msg"
+  DEPENDECIES geometry_msgs
 )
 4. Modify package.xml file
-	ex. add the following lines:
+	For msg/srv:
 ```xml
 <build_depend>rosidl_default_generators</build_depend>
 <exec_depend>rosidl_default_runtime</exec_depend>
@@ -107,7 +108,6 @@ For actions:
 <member_of_group>rosidl_interface_packages</member_of_group>
 ```
 
-
 5. Compile and source
 ```bash
 cd ~/ros2_ws
@@ -118,30 +118,25 @@ source install/setup.bash
 6. Use in your node
 ros2 interface show custom_interfaces/msg/Age
 
-# Create custom service interface
 
-1. Create a directory named `srv` inside your package
+### 1. Calls
 
-2. Inside this directory, create a file named `Name_of_your_service_type.srv`:
-
-3. Modify CMakeLists.txt file
-ex. add these lines:
-find_package(rosidl_default_generators REQUIRED)
-rosidl_generate_interfaces(${PROJECT_NAME}
-  "srv/MyCustomServiceMessage.srv"
-)
-4. Modify package.xml file
-```xml
-<build_depend>rosidl_default_generators</build_depend>
-<exec_depend>rosidl_default_runtime</exec_depend>
-<member_of_group>rosidl_interface_packages</member_of_group>
-```
-
-5. Compile and source
+Subscribe to Topic
 ```bash
-cd ~/ros2_ws
-colcon build --packages-select custom_interfaces
-source install/setup.bash
 ```
 
-6. Use in codeh
+
+Publish to Topic
+```bash
+```
+
+Request to Server
+```bash
+```
+
+Request to Action
+```bash
+ros2 action send_goal <action_name> <action_type> <values>
+
+```
+
